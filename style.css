@@ -1,44 +1,93 @@
-* {
+@import url('https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,700;1,400&family=Fira+Sans&family=Frank+Ruhl+Libre&family=Lato:wght@400;700&family=Open+Sans:wght@400;700;800&family=PT+Sans&family=Poppins:wght@300;400&family=Roboto+Mono&display=swap');* {
     box-sizing: border-box;
 }
 
 body {
+    height: 100vh;
     margin: 0;
     padding: 0;
+    font-family: "poppins";  
   }
-  
-  div {
-    position: relative;
-  }
+
+nav {
+  display: none;
+}
+
+.icon {
+  display: flex;
+  justify-content: flex-end;
+  margin: 2rem;
+}
+
+.wrapper {
+  height: 100%;
+  grid-template-columns: 100%;
+  max-width: 100%;
+  margin: 1rem;
+}
  
-  .fas.fa-bars {
-    margin-top: 0.5rem;
-    margin-left: 2rem;
-  }
+.header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 2rem;
+}
+
+.header h1 {
+  font-size: 2rem;
+}
+
+.header h2 {
+  font-size: 1.2rem;
+}
   
-  .menu {
-     width: 10rem;
-     height: 20rem;
-     background: #dcdcdc;
-     margin-top: -30px;
-     list-style-type: none;
-     display: flex;
-     flex-direction: column;
-     align-items: center;
-     justify-content: space-around;
-     padding: 0;
-     transform: translate(-100%, 0);
+.header button {
+  font-family: "poppins";
+  font-size: 1rem;
+  padding: 1rem 2rem;
+  border: none;
+  border-radius: 1rem;
+  background-color: blue;
+  color: white;
+  margin: 4rem 0rem;
+}
+
+
+.desktop-img {
+  display: none;
   }
-  
-  input[type="checkbox"] {
-    position: absolute;
-    z-index: 1;
-    opacity: 0;
-    top: 0.5rem;
-    left: 2rem;
-  }
-  
-  input:checked ~ .menu {
-    transform: none;
+
+
+  @media screen and (min-width:768px) {
+    .icon {
+      display: none;
+    }
     
+    .header {
+      flex-direction: row;
+      justify-content: center;
+    }
+
+    .header section {
+      margin-right: 2rem;
+    }
+
+    .mobile-img {
+      display: none;
+      }
+
+      .desktop-img {
+        display: block;
+        }
+
+    nav {
+      display: flex;
+      justify-content: space-around;
+      margin-top: 5rem;
+    }
+
+    nav a {
+      color: black;
+      text-decoration: none;
+    }
   }
